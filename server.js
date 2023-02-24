@@ -16,14 +16,13 @@ const app = express();
 
 // middlewares
 app.use(express.json());
-app.use(cors({
-    origin: ["http://localhost:3000",
-    ]
-}))
-app.use((req, res, next) => {
-    console.log(req.path, req.method)
-    next()
+app.use(cors())
+app.get("/",(req, res) => {
+    res.setHeader("Access-Control-Allow-Credentials","true");
+    res.send("API is Running");
 })
+
+
 
 // routes
 app.use('/api/auth', authRoute)
