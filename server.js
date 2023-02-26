@@ -17,7 +17,7 @@ const app = express();
 // middlewares
 app.use(express.json());
 app.use(cors({
-    origin: "https://profolio-5o58.onrender.com"
+    origin: "https://profolio-aw53.onrender.com"
 }))
 app.get("/",(req, res) => {
     res.setHeader("Access-Control-Allow-Credentials","true");
